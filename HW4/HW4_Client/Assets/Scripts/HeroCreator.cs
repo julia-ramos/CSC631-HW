@@ -10,7 +10,7 @@ public class HeroCreator : MonoBehaviour
 	void Start()
 	{
 		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		gameManager.CreateHeroes();
+		// gameManager.CreateHeroes();
 	}
 
 	// Update is called once per frame

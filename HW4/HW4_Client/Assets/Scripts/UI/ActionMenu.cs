@@ -17,14 +17,14 @@ public class ActionMenu : MonoBehaviour
 		turnIndicator = GameObject.Find("Turn Indicator").GetComponent<TMPro.TextMeshProUGUI>();
 	}
 
-	public void OnInteractClick()
-	{
-		gameManager.StartInteraction();
-	}
+	// public void OnInteractClick()
+	// {
+	// 	gameManager.StartInteraction();
+	// }
 
 	void Update()
 	{
-		interactButton.interactable = gameManager.CanInteract();
-		turnIndicator.text = gameManager.GetCurrentPlayer().Name + "'s turn";
+		// interactButton.interactable = gameManager.CanInteract();
+		// turnIndicator.text = gameManager.GetCurrentPlayer().Name + "'s turn";
 	}
 }
