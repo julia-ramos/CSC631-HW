@@ -1,2 +1,5 @@
 
 HW4/HW4_Client/Temp/UnityLockfile
+*.bin
+*.dll
+*.lock

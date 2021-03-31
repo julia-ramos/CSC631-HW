@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	public Player[] Players = new Player[2];
 	public GameObject HeroPrefab;
+	public Hero hero;
 
 	// private Hero[,] gameBoard = new Hero[6,5];
 
@@ -117,6 +118,7 @@ public class GameManager : MonoBehaviour
 	// 	currentPlayer = 3 - currentPlayer;
 	// }
 
+		
 	// public void ProcessClick(GameObject hitObject)
 	// {
 	// 	if (hitObject.tag == "Tile")
@@ -226,9 +228,12 @@ public class GameManager : MonoBehaviour
 			// int pieceIndex = args.piece_idx;
 			int x = args.x;
 			int y = args.y;
-			// Hero hero = Players[args.user_id - 1].Heroes[pieceIndex];
+
+			hero.setMovement(x, y);
+
+			//Hero hero = Players[args.user_id - 1].Heroes[pieceIndex];
 			// gameBoard[hero.x, hero.y] = null;
-			// hero.Move(x, y);
+			//hero.Move(x, y);
 			// gameBoard[x, y] = hero;
 		}
 		else if (args.user_id == Constants.USER_ID)

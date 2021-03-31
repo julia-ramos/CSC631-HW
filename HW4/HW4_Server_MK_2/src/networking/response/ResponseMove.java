@@ -23,11 +23,10 @@ public class ResponseMove extends GameResponse {
     public byte[] constructResponseInBytes() {
         GamePacket packet = new GamePacket(responseCode);
         packet.addInt32(player.getID());
-        packet.addInt32(index);
         packet.addInt32(x);
         packet.addInt32(y);
 
-        Log.printf("Player with id %d has moved piece %d to (%d, %d)", player.getID(), index, x, y);
+        //Log.printf("Player with id %d to (%d, %d)", player.getID(), x, y);
  
         return packet.getBytes();
     }
@@ -36,9 +35,10 @@ public class ResponseMove extends GameResponse {
         this.player = player;
     }
 
-    public void setData(int index, int x, int y) {
-        this.index = index;
-        this.y = y; 
+    public void setData(int x, int y) {
         this.x = x;
+        this.y = y;
+
+        System.out.println("Player: " + player + "(x: " + x + " , y: " + y + ")");
     }
 }

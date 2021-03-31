@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+	private GameObject player = null;
 	public Player Owner;
 	public int Index;
+
+	private NetworkManager networkManager;
 	// public float Speed = 5.0f;
 	// public float InteractionSpeed = 1.0f;
 	public float speed = 0.0f;
 
 	public Rigidbody rb;
-	public float x;
-	public float y;
+	public int x;
+	public int y;
 
-	private bool isMoving = false;
+	//private bool isMoving = false;
 	// private bool isInteracting = false;
 	// private bool isInteractedWith = false;
 	// private float interactionTime = 0.0f;
-	// private Vector3 target;
+	private Vector3 target;
 
 	private GameManager gameManager;
 	
@@ -26,12 +29,17 @@ public class Hero : MonoBehaviour
     void Start()
     {
 		gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+		networkManager = GameObject.Find("Network Manager").GetComponent<NetworkManager>();
 
+		if (player == null)
+		{
+			player = GameObject.Find("Player1");
+		}
 		rb = GetComponent<Rigidbody>();
-
-		// target = transform.position;
-		// x = (int)transform.position.x;
-		// y = (int)transform.position.z;
+		
+		target = transform.position;
+		x = (int)player.transform.position.x;
+		y = (int)player.transform.position.z;
 	}
 
 	// using d-pad controls
@@ -55,13 +63,25 @@ public class Hero : MonoBehaviour
 		if (Input.GetKey(KeyCode.DownArrow)) {
 			rb.AddForce(Vector3.back * speed);
 		}
+		
     }
 
     // places the force needed to move the GameObject onto it
     void FixedUpdate() {
-        OnMove();
-    }
+		//target = new Vector3((float)x, 0, (float)y);
+		OnMove();
+		x = (int)player.transform.position.x;
+		y = (int)player.transform.position.z;
+		//Debug.Log("x: " + x + " y: " + y);
+		networkManager.SendMoveRequest(x, y);
+	}
 
+	public void setMovement(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+	
     // Update is called once per frame
     // void Update()
     // {
