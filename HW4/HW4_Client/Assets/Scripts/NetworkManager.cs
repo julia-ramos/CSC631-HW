@@ -31,6 +31,30 @@ public class NetworkManager : MonoBehaviour
 		}
 	}
 
+	public bool SendLoginRequest(string userID, string password)
+	{
+		if (cManager && cManager.IsConnected())
+		{
+			RequestLogin request = new RequestLogin();
+			request.send(userID, password);
+			cManager.send(request);
+			return true;
+		}
+		return false;
+	}
+
+	public bool SendRegisterRequest(string userID, string password)
+	{
+		if (cManager && cManager.IsConnected())
+		{
+			RequestRegister request = new RequestRegister();
+			request.send(userID, password);
+			cManager.send(request);
+			return true;
+		}
+		return false;
+	}
+
 	public bool SendJoinRequest()
 	{
 		if (cManager && cManager.IsConnected())
