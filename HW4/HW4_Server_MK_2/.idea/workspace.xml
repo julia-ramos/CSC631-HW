@@ -1,20 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61aede35-3e68-4756-a505-d9c445fde42d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW4_Server_Mk_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/networking/request/RequestLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6c81dd64-a164-4b47-84c6-03e62beb4ee0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+    <list default="true" id="855d75f0-2220-4e79-aa34-a35bf04cae54" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/Network/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/Network/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/Network/NetworkRequestTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/Network/NetworkRequestTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/Network/NetworkResponseTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/Network/NetworkResponseTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/NetworkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/NetworkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/UI/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Assets/Scripts/UI/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/01/01e287b799d036ea92e418e8c0722755" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/1b/1b16b97a4eb05d334ba8164aae813dd1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/2c/2cb7095d9cffae8307497504d9b3fb7b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/3c/3c66ae287c3c609c567e1b318582de89" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/3e/3edeaba334d5f701d64ba76d8c9a5175" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/5d/5d7f6fd4f8ab5108510f9d0f581dbec9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/68/6891ae7c99b250d586146e3587acf915" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/7d/7db6a0a4c0a98ca3af394f6f943a1c36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/8f/8f0a4d00510d20ede78da1bc78d91e72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/9e/9e75e9b21a40ee16cc92529ff69a077a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/b2/b279d922877566057cbf043333fdc61f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/cf/cfca9752ec055d8f00b5f15d12ae0ac7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/d7/d7c97a274643891467c29b5757687669" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/da/dac646f634e31abf62838dc018421044" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/ef/ef96f3a6d1c36ba814c283f61bff7299" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/Artifacts/f2/f22011d4dc08aab58a0458fe1174f225" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/EditorInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/EditorInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/PackageCache/com.unity.inputsystem@1.0.2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/PackageCache/com.unity.inputsystem@1.0.2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Library/StateCache/Hierarchy/13589e-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Library/StateCache/Hierarchy/13589e-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-0389de809d2078b41966dddd95435f82" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-0d3ae1d341fe15841a22d008f714a167" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-1d009ab1d7e757e48b27d26314e0b398" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-20b497fa6f28bf9469976bf0822e2303" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-23d1f9b8c1bc07f449f8dd8e89af02e1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-2a6aa1fcec5730f43a25d4b1a4c8234d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-2aab6fbce9e2fb44d89674a8b950b854" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-2c3d2061c85ceb6449c5847a47ea519e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-2e5f2142087485247b6abbc0fb1b52ca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-30b17114f8ebaf446b80489eb5917678" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-340d2ac38c10b3547b52869e35d67a6d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-3748b5bdf2c88b246ad1035f8fe96409" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-41894ee48e4fa1e45be1886c1e5733d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-43de03c085687a746963499099cd726f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-4d4b55cf344ab7c47aa032b55f983a32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-4f28229034dba3d45a6b70c7e0888292" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-51bcbe0ecd126f34e961bff501940de6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-553a31c0aad86ea4db854a405582fde0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-5783027d2e4725a49b79240d6137ba05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-5f2eaea0eed4d6b4fa171f4e8323017b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-61cd4c16693f31c4baf97c454834bbb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-6ea7928c44f8b8047b2fa20686035192" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-78ede67185f58d94baa5eb2276be378f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-7bad84a4dfd968444a870495c1df83d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-7ca6fdf208c666a41a03cceba15aaded" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-7d1ca115ad1c15740ac12782c9bea15e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-85e461ac432858c4884b649295d1432c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-878429e5ef296a2488dc6b73f6b80968" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-959483ce083af744dadccc5a8b84c948" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-9f88b4a0f7f781e478bfae3b20b9e2b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-a00c1ed9789ba5d46b0361be13f21294" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-a039fce54659bf74289db775c52f9e6c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-a27e06573e282124aaa11fa71607e902" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-aba8dcb13e1453243ac92f3ee62501a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-af316c89afb32e44a84b46b97650b280" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-b1b4203fb38fdcd49b9541bf7a280966" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-bd5ab3e5da388ec478bd5025a647c7d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-c2f0437c7dc5ded469b0c2f894931ef7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-c647b95227e3efe4794bd0fb8676452d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-c7e1f707e18392b49938bac0ca334bfa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-c9451053692a8834a8b778e03aee3232" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-c9b4f315bc2222147b81f1c9a6268fa8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-cd072ffea44f3094f9bd800f14e2f1f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-d0d41b99892afc847bfa57d8c41fd8d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-d1971b9d9d1f5e34ab0babe02e0ae90b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-d2f52c00bc588bd4b83b83f0dfaff582" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-d335893f4b40b05419029bc1097321b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-d948b253d48dfb648a254c820539fe2d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-da4e8cb2b5c73fb498cd7d48389aaa7e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-e176d032e61aff144813f47df22ee636" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-e2ecb6cb69c2c9d419d4721adfaf9ec2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-e7a48c0115d15e44395d2637dd04fc3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-e8cc268ce17a4d44f9c40d1dbbdfe085" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-e96880a82699d6042b27f80c61df82d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-f0fa4da99cab3b84cbf11ede1537708c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-f710d4c0275d09e42a22723b1a4f536a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-f88095ff7274775408a5cc08d92d5f12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-fecf89520fa25524686f6a0dc604f3e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/UnityTempFile-ffde0bedc831a3a4f9a8542ce31405d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_Client/Temp/__Backupscenes/0.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/__Backupscenes/1.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/tempFile.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/tempFile.resG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_Client/Temp/tempFile.resS" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW4_Server_Mk_2/metadata/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4_Server_Mk_2/metadata/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW4_Server_Mk_2/metadata/GameRequestTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4_Server_Mk_2/metadata/GameRequestTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW4_Server_Mk_2/networking/request/RequestLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW4_Server_Mk_2/networking/request/RequestLogin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/metadata/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/metadata/GameRequestTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/metadata/GameRequestTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/networking/request/RequestLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/networking/request/RequestLogin.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,20 +110,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1qJ909dLJtb95q3g4gK4C70s8Hc" />
+  <component name="ProjectId" id="1qSVvwZzZfFBJ4glBjUhwI9ttTy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
@@ -54,7 +134,7 @@
   <component name="RunManager">
     <configuration name="GameServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="core.GameServer" />
-      <module name="HW4_Server_Mk_2" />
+      <module name="HW4_Server_MK_2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="core.*" />
@@ -76,12 +156,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="61aede35-3e68-4756-a505-d9c445fde42d" name="Default Changelist" comment="" />
-      <created>1616786599993</created>
+      <changelist id="855d75f0-2220-4e79-aa34-a35bf04cae54" name="Default Changelist" comment="" />
+      <created>1617073212926</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1616786599993</updated>
-      <workItem from="1616786602119" duration="3240000" />
+      <updated>1617073212926</updated>
+      <workItem from="1617073214697" duration="5455000" />
+      <workItem from="1617142392946" duration="6819000" />
+      <workItem from="1617152526768" duration="628000" />
     </task>
     <servers />
   </component>
@@ -93,7 +175,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

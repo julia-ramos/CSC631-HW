@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ public class MainMenu : MonoBehaviour
 	private GameObject rootMenuPanel;
 	private GameObject hotseatMenuPanel;
 	private GameObject networkMenuPanel;
+	private GameObject welcomeMenuPanel;
+	private GameObject registerMenuPanel;
+	private GameObject loginMenuPanel;
 
 	private GameObject messageBox;
 	private TMPro.TextMeshProUGUI messageBoxMsg;
@@ -32,12 +36,18 @@ public class MainMenu : MonoBehaviour
 	private bool ready = false;
 	private bool opReady = false;
 
+	private string userID = "";
+	private string password = "";
+
     // Start is called before the first frame update
     void Start()
     {
 		rootMenuPanel = GameObject.Find("Root Menu");
 		hotseatMenuPanel = GameObject.Find("Hotseat Menu");
 		networkMenuPanel = GameObject.Find("Network Menu");
+		welcomeMenuPanel = GameObject.Find("Welcome Menu");
+		registerMenuPanel = GameObject.Find("Register Form");
+		loginMenuPanel = GameObject.Find("Login Form");
 
 		messageBox = GameObject.Find("Message Box");
 		messageBoxMsg = messageBox.transform.Find("Message").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
@@ -51,14 +61,93 @@ public class MainMenu : MonoBehaviour
 		msgQueue = networkManager.GetComponent<MessageQueue>();
 
 		msgQueue.AddCallback(Constants.SMSG_JOIN, OnResponseJoin);
+		msgQueue.AddCallback(Constants.SMSG_LOGIN, OnResponseLogin);
+		msgQueue.AddCallback(Constants.SMSG_REGISTER, OnResponseRegister);
 		msgQueue.AddCallback(Constants.SMSG_LEAVE, OnResponseLeave);
 		msgQueue.AddCallback(Constants.SMSG_SETNAME, OnResponseSetName);
 		msgQueue.AddCallback(Constants.SMSG_READY, OnResponseReady);
 
 		rootMenuPanel.SetActive(true);
+		
 		hotseatMenuPanel.SetActive(false);
 		networkMenuPanel.SetActive(false);
 		messageBox.SetActive(false);
+		
+		welcomeMenuPanel.SetActive(false);
+		registerMenuPanel.SetActive(false);
+		loginMenuPanel.SetActive(false);
+	}
+
+	public void OnWelcomeLoginClick() {
+		welcomeMenuPanel.SetActive(false);
+		loginMenuPanel.SetActive(true);
+	}
+
+	public void OnWelcomeRegisterClick() {
+		welcomeMenuPanel.SetActive(false);
+		registerMenuPanel.SetActive(true);
+	}
+
+	public void OnLoginBackClick() {
+		loginMenuPanel.SetActive(false);
+		welcomeMenuPanel.SetActive(true);
+	}
+	
+	public void OnLoginLoginClick() {
+		Debug.Log("Send LogReq");
+		bool loggedIn = networkManager.SendLoginRequest(userID, password);
+		if (!loggedIn) {
+			messageBoxMsg.text = "Unable to login.";
+			messageBox.SetActive(true);
+		}
+	}
+
+	public void OnResponseLogin(ExtendedEventArgs eventArgs)
+	{
+		ResponseLoginEventArgs args = eventArgs as ResponseLoginEventArgs;
+		if (args.status == 0)
+		{
+			messageBoxMsg.text = "Login Successful!";
+			messageBox.SetActive(true);
+			loginMenuPanel.SetActive(false);
+			networkMenuPanel.SetActive(true);
+		}
+		else
+		{
+			messageBoxMsg.text = "Login Credentials Invalid";
+			messageBox.SetActive(true);
+		}
+	}
+
+	public void OnRegisterBackClick() {
+		registerMenuPanel.SetActive(false);
+		welcomeMenuPanel.SetActive(true);
+	}
+
+	public void OnRegisterRegisterClick() {
+		Debug.Log("Send RegisterReq");
+		bool registered = networkManager.SendRegisterRequest(userID, password);
+		if (!registered) {
+			messageBoxMsg.text = "Unable to Register.";
+			messageBox.SetActive(true);
+		}
+	}
+
+	public void OnResponseRegister(ExtendedEventArgs eventArgs)
+	{
+		ResponseRegisterEventArgs args = eventArgs as ResponseRegisterEventArgs;
+		if (args.status == 0)
+		{
+			messageBoxMsg.text = "Registration Successful!";
+			messageBox.SetActive(true);
+			registerMenuPanel.SetActive(false);
+			loginMenuPanel.SetActive(true);
+		}
+		else
+		{
+			messageBoxMsg.text = "Registration failed. Account may already exist.";
+			messageBox.SetActive(true);
+		}
 	}
 
 	#region RootMenu
@@ -160,7 +249,8 @@ public class MainMenu : MonoBehaviour
 			opponentInput.SetActive(false);
 
 			rootMenuPanel.SetActive(false);
-			networkMenuPanel.SetActive(true);
+			//networkMenuPanel.SetActive(true);
+			welcomeMenuPanel.SetActive(true);
 		}
 		else
 		{
@@ -200,6 +290,18 @@ public class MainMenu : MonoBehaviour
 		{
 			p2Name = name;
 		}
+	}
+
+	public void OnUserIDSet(string inputUserID)
+	{
+		print("CLIENT sending: inputUserID = " + inputUserID);
+		userID = inputUserID;
+	}
+	
+	public void OnPasswordSet(string inputPassword)
+	{
+		print("CLIENT sending: inputPassword = " + inputPassword);
+		password = inputPassword;
 	}
 
 	public void OnResponseSetName(ExtendedEventArgs eventArgs)
@@ -279,7 +381,7 @@ public class MainMenu : MonoBehaviour
 		Player player1 = new Player(1, p1Name, new Color(0.9f, 0.1f, 0.1f), true);
 		Player player2 = new Player(2, p2Name, new Color(0.2f, 0.2f, 1.0f), true);
 		gameManager.Init(player1, player2);
-		SceneManager.LoadScene("Game");
+		SceneManager.LoadScene("BumperBalls");
 	}
 
 	private void StartNetworkGame()
@@ -296,6 +398,6 @@ public class MainMenu : MonoBehaviour
 		Player player1 = new Player(1, p1Name, new Color(0.9f, 0.1f, 0.1f), Constants.USER_ID == 1);
 		Player player2 = new Player(2, p2Name, new Color(0.2f, 0.2f, 1.0f), Constants.USER_ID == 2);
 		gameManager.Init(player1, player2);
-		SceneManager.LoadScene("Game");
+		SceneManager.LoadScene("BumperBalls");
 	}
 }

@@ -20,45 +20,45 @@ public class ObjectSelector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit))
-		{
-			GameObject hitObject = hit.transform.gameObject;
-			if (Input.GetMouseButtonUp(0))
-			{
-				gameManager.ProcessClick(hitObject);
-			}
-			else if (hitObject != HighlightedObject && hit.transform.parent.gameObject != HighlightedObject)
-			{
-				SetHighlightedObject(hitObject);
-			}
-		}
-		else
-		{
-			SetHighlightedObject(null);
-		}
+		// Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+		// RaycastHit hit;
+		// if (Physics.Raycast(ray, out hit))
+		// {
+		// 	// GameObject hitObject = hit.transform.gameObject;
+		// 	if (Input.GetMouseButtonUp(0))
+		// 	{
+		// 		// gameManager.ProcessClick(hitObject);
+		// 	}
+		// 	else if (hitObject != HighlightedObject && hit.transform.parent.gameObject != HighlightedObject)
+		// 	{
+		// 		// SetHighlightedObject(hitObject);
+		// 	}
+		// }
+		// else
+		// {
+		// 	// SetHighlightedObject(null);
+		// }
 	}
 
-	public static void SetHighlightedObject(GameObject gameObject)
-	{
-		if (HighlightedObject)
-		{
-			Highlight hl = HighlightedObject.GetComponentInParent<Highlight>();
-			hl.OnUnhighlight();
-		}
-		HighlightedObject = gameObject;
-		if (HighlightedObject)
-		{
-			if (HighlightedObject.GetComponentInParent<Hero>())
-			{
-				HighlightedObject = HighlightedObject.transform.parent.gameObject;
-			}
-			bool enabled = gameManager.HighlightEnabled(HighlightedObject);
-			Highlight hl = HighlightedObject.GetComponentInParent<Highlight>();
-			hl.OnHighlight(enabled);
-		}
-	}
+	// public static void SetHighlightedObject(GameObject gameObject)
+	// {
+	// 	if (HighlightedObject)
+	// 	{
+	// 		Highlight hl = HighlightedObject.GetComponentInParent<Highlight>();
+	// 		hl.OnUnhighlight();
+	// 	}
+	// 	HighlightedObject = gameObject;
+	// 	if (HighlightedObject)
+	// 	{
+	// 		if (HighlightedObject.GetComponentInParent<Hero>())
+	// 		{
+	// 			HighlightedObject = HighlightedObject.transform.parent.gameObject;
+	// 		}
+	// 		bool enabled = gameManager.HighlightEnabled(HighlightedObject);
+	// 		Highlight hl = HighlightedObject.GetComponentInParent<Highlight>();
+	// 		hl.OnHighlight(enabled);
+	// 	}
+	// }
 
 	public static void SetSelectedObject(GameObject gameObject)
 	{

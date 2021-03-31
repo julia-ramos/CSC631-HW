@@ -29,6 +29,7 @@ public class GameRequestTable {
         add(Constants.CMSG_INTERACT, "RequestInteract");
         add(Constants.CMSG_HEARTBEAT, "RequestHeartbeat");
         add(Constants.CMSG_LOGIN, "RequestLogin");
+        add(Constants.CMSG_REGISTER, "RequestRegister");
     }
 
     /**

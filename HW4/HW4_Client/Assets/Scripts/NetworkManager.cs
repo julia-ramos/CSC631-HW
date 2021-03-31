@@ -31,6 +31,30 @@ public class NetworkManager : MonoBehaviour
 		}
 	}
 
+	public bool SendLoginRequest(string userID, string password)
+	{
+		if (cManager && cManager.IsConnected())
+		{
+			RequestLogin request = new RequestLogin();
+			request.send(userID, password);
+			cManager.send(request);
+			return true;
+		}
+		return false;
+	}
+
+	public bool SendRegisterRequest(string userID, string password)
+	{
+		if (cManager && cManager.IsConnected())
+		{
+			RequestRegister request = new RequestRegister();
+			request.send(userID, password);
+			cManager.send(request);
+			return true;
+		}
+		return false;
+	}
+
 	public bool SendJoinRequest()
 	{
 		if (cManager && cManager.IsConnected())
@@ -79,12 +103,12 @@ public class NetworkManager : MonoBehaviour
 		return false;
 	}
 
-	public bool SendMoveRequest(int pieceIndex, int x, int y)
+	public bool SendMoveRequest(int x, int y)
 	{
 		if (cManager && cManager.IsConnected())
 		{
 			RequestMove request = new RequestMove();
-			request.send(pieceIndex, x, y);
+			request.send(x, y);
 			cManager.send(request);
 			return true;
 		}
